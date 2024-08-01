@@ -2,33 +2,47 @@
     namespace php\modelo;
 
     class Livros{
-        public int aVoltaDosQueNaoForam(){
-            return "333 livros";        
+        private string $livro1;
+        private string $livro2;
+        private string $livro3;
+        private string $livro4;
+        private string $livro5;
+
+        public function __construct(string $livro1, string $livro2, string $livro3, string $livro4, string $livro5){
+            $this->livro1 = $livro1;
+            $this->livro2 = $livro2;
+            $this->livro3 = $livro3;
+            $this->livro4 = $livro4;
+            $this->livro5 = $livro5;
         }
 
-        public int dicasDeComoChegarla(){
-            return "269";
+        public function getLivro1():string{
+            return $this->livro1;
         }
 
-        public int logicaDeProgramacao(){
-            return "100";
+        public function getLivro2():string{
+            return $this->livro2;
         }
 
-        public int redesDeComputadores(){
-            return "53";
+        public function getLivro3():string{
+            return $this->livro3;
         }
 
-        public int harryPotter(){
-            return "20";
+        public function getLivro4():string{
+            return $this->livro4;
+        }
+
+        public function getLivro5():string{
+            return $this->livro5;
         }
 
         public function livros(){
             return "<br> Estoque dos Livros:".
-                       "<br>A Volta Dos Que Não Foram: ".$this->aVoltaDosQueNaoForam().
-                       "<br>Dicas De Como Chegarla: ".$this->dicasDeComoChegarla().
-                       "<br>Lógica De Programacao: ".$this->logicaDeProgramacao().
-                       "<br>Redes De Computadores: ".$this->redesDeComputadores().
-                       "<br>Harry Potter: ".$this->harryPotter();
+                       "<br>A Volta Dos Que Não Foram: ".$this->getLivro1().
+                       "<br>Dicas De Como Chegarla: ".$this->getLivro2().
+                       "<br>Lógica De Programacao: ".$this->getLivro3().
+                       "<br>Redes De Computadores: ".$this->getLivro4().
+                       "<br>Harry Potter: ".$this->getLivro5();
             }
     }
 ?>
